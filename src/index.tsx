@@ -3,11 +3,15 @@ import "./styles/tailwind.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'
+import MovieMagned from './context/movie'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <MovieMagned>
+      <Router>
+        <App />
+      </Router>
+    </MovieMagned>
 )
 
 // If you want your app to work offline and load faster, you can change
